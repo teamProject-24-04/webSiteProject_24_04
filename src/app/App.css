@@ -1,0 +1,13 @@
+/* App.css */
+.image-transition {
+  opacity: 0;
+  transform: translateY(100px); /* Start position: translate down by 100px */
+  transition:
+    opacity 1s ease,
+    transform 1s ease; /* Add transition for smoothness */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* End position: translate to original position */
+}

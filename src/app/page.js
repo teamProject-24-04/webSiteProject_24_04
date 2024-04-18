@@ -1,19 +1,50 @@
 'use client';
 
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from '@mui/material/styles';
-
 import { Button, AppBar, Toolbar, CssBaseline, Box, Typography, Container } from '@mui/material';
-
 import RootTheme from './theme';
+import './App.css'; // Import CSS file for animations
 
 function App() {
   const pages = ['팀소개', '레시피 리스트', '앱 다운로드'];
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  // 스크롤 이벤트를 처리하는 함수
+  const handleScroll = () => {
+    const images = document.querySelectorAll('.image-transition');
+    let delay = 0; // 초기 지연
+    images.forEach((image) => {
+      if (isInViewport(image)) {
+        setTimeout(() => {
+          image.classList.add('visible');
+        }, delay);
+        delay += 400; // 다음 이미지를 위한 지연 증가
+      }
+    });
+  };
+  // Function to check if element is in viewport
+  const isInViewport = (elem) => {
+    const bounding = elem.getBoundingClientRect();
+    return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -101,7 +132,7 @@ function App() {
             overflow: 'hidden',
           }}>
           <source
-            src="https://cdn.pixabay.com/video/2021/09/06/87692-602894354_tiny.mp4"
+            src="https://cdn.pixabay.com/video/2023/03/02/152830-804130714_tiny.mp4"
             type="video/mp4"
           />
         </video>
@@ -110,11 +141,13 @@ function App() {
           <img
             src="https://i.ibb.co/hVp8dnf/0000-removebg-preview.png"
             alt="Sample Image"
+            className={isVisible ? 'image-transition visible' : 'image-transition'}
             style={{ width: '20%', marginRight: '-5%', borderRadius: '10px' }}
           />
           <img
             src="https://i.ibb.co/DQ9GVWs/0000-removebg-preview.png"
             alt="Sample Image"
+            className={isVisible ? 'image-transition visible' : 'image-transition'}
             style={{ width: '20%', borderRadius: '10px' }}
           />
         </div>
