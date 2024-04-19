@@ -175,6 +175,45 @@ function App() {
           <p style={{ fontSize: '250%', fontWeight: '700', marginTop: '-2%' }}>바베큐 레시피를 </p>
           <p style={{ fontSize: '250%', fontWeight: '700', marginTop: '-2%' }}>모두 모아놨어요!</p>
         </div>
+        <div className="one" style={{ marginTop: '8%' }}>
+          <div className="wrapper">
+            <div className="photobanner">
+              <div className="image-container">
+                <img
+                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMTFfNTIg%2FMDAxNzA0OTQ0MjMxNzE2.Wbx2U8JUNvX8AMICUP1yhJTfAr6meUJ-GXAM5BT3Yccg.T1xkyO4diCOE95Tai073Fs153sYm0jNvTuUdKtGEjNog.JPEG.7hansollee%2Fgfgdfgdffg.JPG&type=sc960_832"
+                  alt=""
+                />
+              </div>
+              <div className="image-container">
+                <img
+                  src="https://i.namu.wiki/i/Poyl8CgBm0-zJs25TMdpdyBqF7JT7_9ikSkUKPZUnNY8YwQjRhoZ9o8xt1psfwm0Kn_M8PUJggnvrNmjAST5R1mlvifMbx2GuKhuDHDI5B_NVipYK-KhrH5LldRUR7oyYmhqf4Dm-TgCfoEXvF5L1A.webp"
+                  alt=""
+                />
+              </div>
+              <div className="image-container">
+                <img
+                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjRfMTE1%2FMDAxNjIxODM3NjA3MTU4.CWEgZmmBdyLZ9PGR4K37qhuwPhDoQ2P_Njb51H98hMog.73BEYZNOzTFP5CuROUWaS1n_fgVhla0z_liN8_1tQBUg.JPEG.zestncom%2F20210413_class101_1165.jpg&type=sc960_832"
+                  alt=""
+                />
+              </div>
+              <div className="image-container">
+                <img
+                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5415%2F2023%2F02%2F04%2F0000188663_004_20230204140202134.png&type=sc960_832"
+                  alt=""
+                />
+              </div>
+              <div className="image-container">
+                <img
+                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F609%2F2023%2F07%2F17%2F202307171642515710_2_20230717164905597.jpg&type=a340"
+                  alt=""
+                />
+              </div>
+              <div className="image-container">
+                <img src="https://i.ytimg.com/vi/0jfdHsDoJwg/maxresdefault.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

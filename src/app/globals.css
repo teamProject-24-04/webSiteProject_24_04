@@ -13,3 +13,35 @@
 html > body {
   font-family: 'GmarketSansMedium';
 }
+
+/* 이미지 슬라이드쇼 */
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.photobanner {
+  position: relative;
+  height: 339px;
+  width: 3000px;
+  margin-bottom: 30px;
+  display: flex;
+  border-radius: 15px;
+  animation: bannermove 20s linear infinite;
+}
+
+.photobanner img {
+  height: 339px;
+  width: 339px;
+  margin: 0px 25px;
+  border-radius: 15px;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
