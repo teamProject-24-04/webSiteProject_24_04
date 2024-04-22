@@ -151,7 +151,7 @@ function App() {
             style={{ width: '20%', borderRadius: '10px' }}
           />
         </div>
-        <div>
+        <div className={isVisible ? 'image-transition visible' : 'image-transition'}>
           <p style={{ fontSize: '50px', fontWeight: '700', color: 'white', marginTop: '100px' }}>
             바베큐러들의 선택
           </p>
@@ -163,7 +163,7 @@ function App() {
       <div
         style={{
           width: '100%',
-          height: '1000px',
+          height: '900px',
           backgroundColor: 'white',
           paddingTop: '40px',
           textAlign: 'center',
@@ -212,6 +212,139 @@ function App() {
                 <img src="https://i.ytimg.com/vi/0jfdHsDoJwg/maxresdefault.jpg" alt="" />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '1000px',
+          backgroundColor: 'white',
+          paddingTop: '40px',
+          textAlign: 'center',
+        }}>
+        <div>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '20px' }}>
+            필요한 레시피가 없다면?
+          </p>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '-2%' }}>
+            직접 만들어 보아요
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '700', marginTop: '-50px' }}>
+            다양한 레시피를 무제한으로 만들 수 있어요.
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '700', marginTop: '0' }}>
+            그릴마스터에서는 갯수 제한없이 무료에요.
+          </p>
+        </div>
+        <div
+          style={{ lineHeight: '1.2', textAlign: 'left', marginLeft: '30%', marginTop: '5%' }}
+          className={isVisible ? 'image-transition visible' : 'image-transition'}>
+          <p style={{ margin: '5px 0', padding: '0', fontSize: '140%', fontWeight: '700' }}>
+            유튜버들의 레시피와
+          </p>
+          <p style={{ margin: '5px 0', padding: '0', fontSize: '140%', fontWeight: '700' }}>
+            회원들의 레시피를
+          </p>
+          <p style={{ margin: '5px 0', padding: '0', fontSize: '140%', fontWeight: '700' }}>
+            저장해놔요.
+          </p>
+          <div style={{ marginTop: '1%', position: 'relative' }}>
+            <img
+              src="https://i.ibb.co/2qwB6n3/1.png"
+              alt="Sample Image"
+              style={{ width: '20%', borderRadius: '10px' }}
+            />
+            <div
+              style={{
+                display: 'absolute',
+                width: '300px',
+                height: '300px',
+                marginTop: '-50%',
+                backgroundColor: 'black',
+                marginLeft: '32%',
+                borderRadius: '20px',
+                textAlign: 'center',
+              }}>
+              <div
+                style={{
+                  color: 'white',
+                  paddingTop: '25%',
+                  paddingLeft: '15%',
+                  fontWeight: '700',
+                  textAlign: 'left',
+                }}>
+                <p> 나만의 레시피를 작성하고</p>
+                <p>회원들에게 공유해요</p>
+                <p>댓글을 통해 꿀팁 공유 팍팍!!</p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: 'absolute',
+                width: '300px',
+                height: '180px',
+                marginTop: '2%',
+                backgroundColor: 'khaki',
+                marginLeft: '32%',
+                borderRadius: '20px',
+                textAlign: 'center',
+              }}>
+              <div
+                style={{
+                  color: 'black',
+                  paddingTop: '10%',
+                  fontWeight: '700',
+                  textAlign: 'left',
+                  paddingLeft: '15%',
+                }}>
+                <p>유명 유튜버들의 레시피와</p>
+                <p>회원들의 레시피를</p>
+                <p>평가하고 리뷰를 남겨보세요.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '1000px',
+          backgroundColor: 'white',
+          paddingTop: '40px',
+          textAlign: 'center',
+        }}>
+        <div>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '20px' }}>
+            캠핑장 및 바베큐장 찾기
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '600', marginTop: '-50px' }}>
+            내 주변과 장소 목적에 따라 캠핑장을 추천해줘요.
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '600', marginTop: '0' }}>
+            이대로 진행하면 반드시 원하는 캠핑을 할 수 있어요.
+          </p>
+        </div>
+        <div
+          style={{ lineHeight: '1.2', textAlign: 'left', marginLeft: '25%', marginTop: '5%' }}
+          className={isVisible ? 'image-transition visible' : 'image-transition'}>
+          <div style={{ marginTop: '1%', position: 'relative' }}>
+            <img
+              src="https://i.ibb.co/SVSCTMM/0000-removebg-preview.png"
+              alt="Sample Image"
+              style={{ width: '30%', borderRadius: '10px', position: 'relative', zIndex: '2' }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                width: '80%',
+                height: '70%',
+                backgroundColor: 'red',
+                borderRadius: '10px',
+                top: '28%',
+                left: 0,
+                zIndex: '1',
+              }}></div>
           </div>
         </div>
       </div>

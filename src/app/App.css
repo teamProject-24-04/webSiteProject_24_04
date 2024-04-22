@@ -1,13 +1,13 @@
 /* App.css */
 .image-transition {
   opacity: 0;
-  transform: translateY(100px); /* Start position: translate down by 100px */
+  transform: translateY(100px); /* 시작 위치: 100px 아래로 이동 */
   transition:
     opacity 1s ease,
-    transform 1s ease; /* Add transition for smoothness */
+    transform 1s ease; /* 부드러운 전환을 위한 트랜지션 추가 */
 }
 
 .visible {
   opacity: 1;
-  transform: translateY(0); /* End position: translate to original position */
+  transform: translateY(0); /* 종료 위치: 원래 위치로 이동 */
 }
