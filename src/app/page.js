@@ -175,42 +175,48 @@ function App() {
           <p style={{ fontSize: '250%', fontWeight: '700', marginTop: '-2%' }}>바베큐 레시피를 </p>
           <p style={{ fontSize: '250%', fontWeight: '700', marginTop: '-2%' }}>모두 모아놨어요!</p>
         </div>
-        <div className="one" style={{ marginTop: '8%' }}>
-          <div className="wrapper">
-            <div className="photobanner">
-              <div className="image-container">
-                <img
-                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMTFfNTIg%2FMDAxNzA0OTQ0MjMxNzE2.Wbx2U8JUNvX8AMICUP1yhJTfAr6meUJ-GXAM5BT3Yccg.T1xkyO4diCOE95Tai073Fs153sYm0jNvTuUdKtGEjNog.JPEG.7hansollee%2Fgfgdfgdffg.JPG&type=sc960_832"
-                  alt=""
-                />
-              </div>
-              <div className="image-container">
-                <img
-                  src="https://i.namu.wiki/i/Poyl8CgBm0-zJs25TMdpdyBqF7JT7_9ikSkUKPZUnNY8YwQjRhoZ9o8xt1psfwm0Kn_M8PUJggnvrNmjAST5R1mlvifMbx2GuKhuDHDI5B_NVipYK-KhrH5LldRUR7oyYmhqf4Dm-TgCfoEXvF5L1A.webp"
-                  alt=""
-                />
-              </div>
-              <div className="image-container">
-                <img
-                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjRfMTE1%2FMDAxNjIxODM3NjA3MTU4.CWEgZmmBdyLZ9PGR4K37qhuwPhDoQ2P_Njb51H98hMog.73BEYZNOzTFP5CuROUWaS1n_fgVhla0z_liN8_1tQBUg.JPEG.zestncom%2F20210413_class101_1165.jpg&type=sc960_832"
-                  alt=""
-                />
-              </div>
-              <div className="image-container">
-                <img
-                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5415%2F2023%2F02%2F04%2F0000188663_004_20230204140202134.png&type=sc960_832"
-                  alt=""
-                />
-              </div>
-              <div className="image-container">
-                <img
-                  src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F609%2F2023%2F07%2F17%2F202307171642515710_2_20230717164905597.jpg&type=a340"
-                  alt=""
-                />
-              </div>
-              <div className="image-container">
-                <img src="https://i.ytimg.com/vi/0jfdHsDoJwg/maxresdefault.jpg" alt="" />
-              </div>
+        <div
+          className="wrapper"
+          style={{ height: '400px', fontSize: '140%', fontWeight: '700', marginTop: '5%' }}>
+          <div className="photobanner">
+            <div className="image-container">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMTFfNTIg%2FMDAxNzA0OTQ0MjMxNzE2.Wbx2U8JUNvX8AMICUP1yhJTfAr6meUJ-GXAM5BT3Yccg.T1xkyO4diCOE95Tai073Fs153sYm0jNvTuUdKtGEjNog.JPEG.7hansollee%2Fgfgdfgdffg.JPG&type=sc960_832"
+                alt=""
+              />
+              <p>고기남자</p>
+            </div>
+            <div className="image-container">
+              <img
+                src="https://i.namu.wiki/i/nQJW2e_q6_y8kEDDoQQm-uqQxcp9kdpEt5GXcdPj5KFGiHLfz5OYnWztz2FYImuC-3S6lUxX7undv90l_8_jPg.webp"
+                alt=""
+              />
+              <p>육식맨</p>
+            </div>
+            <div className="image-container">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjRfMTE1%2FMDAxNjIxODM3NjA3MTU4.CWEgZmmBdyLZ9PGR4K37qhuwPhDoQ2P_Njb51H98hMog.73BEYZNOzTFP5CuROUWaS1n_fgVhla0z_liN8_1tQBUg.JPEG.zestncom%2F20210413_class101_1165.jpg&type=sc960_832"
+                alt=""
+              />
+              <p>정육왕</p>
+            </div>
+            <div className="image-container">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5415%2F2023%2F02%2F04%2F0000188663_004_20230204140202134.png&type=sc960_832"
+                alt=""
+              />
+              <p>백종원</p>
+            </div>
+            <div className="image-container">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F609%2F2023%2F07%2F17%2F202307171642515710_2_20230717164905597.jpg&type=a340"
+                alt=""
+              />
+              <p>승우아빠</p>
+            </div>
+            <div className="image-container">
+              <img src="https://i.ytimg.com/vi/0jfdHsDoJwg/maxresdefault.jpg" alt="" />
+              <p>쿡톡</p>
             </div>
           </div>
         </div>
@@ -309,7 +315,7 @@ function App() {
       <div
         style={{
           width: '100%',
-          height: '1000px',
+          height: '1200px',
           backgroundColor: 'white',
           paddingTop: '40px',
           textAlign: 'center',
@@ -332,19 +338,208 @@ function App() {
             <img
               src="https://i.ibb.co/SVSCTMM/0000-removebg-preview.png"
               alt="Sample Image"
-              style={{ width: '30%', borderRadius: '10px', position: 'relative', zIndex: '2' }}
+              style={{
+                width: '30%',
+                borderRadius: '10px',
+                position: 'relative',
+                zIndex: '2',
+                marginLeft: '-3%',
+              }}
             />
             <div
               style={{
                 position: 'absolute',
                 width: '80%',
-                height: '70%',
-                backgroundColor: 'red',
-                borderRadius: '10px',
-                top: '28%',
-                left: 0,
+                height: '75%',
+                background: 'linear-gradient(to left bottom, paleturquoise, pink)',
+                borderRadius: '20px',
+                top: '18%',
+                left: '-5%',
                 zIndex: '1',
-              }}></div>
+              }}>
+              <div
+                style={{
+                  fontSize: '200%',
+                  fontWeight: '700',
+                  marginLeft: '44%',
+                  marginTop: '15%',
+                }}>
+                <p>우편번호를 통해 내 주변</p>
+                <p>캠핑장과 바베큐장을 찾아봐요.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '1000px',
+          backgroundColor: 'black',
+          paddingTop: '8%',
+          textAlign: 'center',
+        }}>
+        <div
+          style={{ color: 'white' }}
+          className={isVisible ? 'image-transition visible' : 'image-transition'}>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '20px' }}>
+            그릴마스터는 회원과 함께 성장해요
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '600', marginTop: '-50px' }}>
+            레시피로 다양한 경험을 공유해보세요.
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '600', marginTop: '0' }}>
+            최고의 바베큐 그릴마스터에서 모두 도와드릴게요.
+          </p>
+
+          <div style={{ lineHeight: '1.2', textAlign: 'left', marginLeft: '25%', marginTop: '5%' }}>
+            <div style={{ marginTop: '1%', position: 'relative' }}>
+              <img
+                src="https://i.ibb.co/64DBbvn/image.png"
+                alt="Sample Image"
+                style={{
+                  width: '15%',
+                  borderRadius: '100%',
+                  position: 'relative',
+                  zIndex: '2',
+                  marginLeft: '3%',
+                  marginTop: '10%',
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '80%',
+                  height: '100%',
+                  backgroundColor: 'mediumpurple',
+                  borderRadius: '20px',
+                  top: '18%',
+                  left: '-5%',
+                  zIndex: '1',
+                }}>
+                <div
+                  style={{
+                    fontSize: '200%',
+                    fontWeight: '700',
+                    marginLeft: '38%',
+                    marginTop: '10%',
+                    color: 'black',
+                  }}>
+                  <p>"새로운 레시피를 알 수 있는 앱이 생겼고,</p>
+                  <p>제 레시피를 공유할 수 있어서 좋아요!"</p>
+                  <p style={{ fontSize: '50%', marginTop: '-3%' }}>그릴마스터 장민영</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '1480px',
+          backgroundColor: 'black',
+          paddingTop: '8%',
+          textAlign: 'center',
+        }}>
+        <div style={{ color: 'white' }}>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '20px' }}>
+            고기 좋아하는 사람들이
+          </p>
+          <p style={{ fontSize: '340%', fontWeight: '700', marginTop: '-50px' }}>
+            모여서 만들었어요
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '500', marginTop: '-3%' }}>
+            모든 바베큐를 사랑하는 사람들을 위해
+          </p>
+          <p style={{ fontSize: '100%', fontWeight: '500', marginTop: '0' }}>
+            동료들이 모여 만들었어요.
+          </p>
+          <p
+            style={{
+              fontSize: '100%',
+              fontWeight: '500',
+              marginTop: '0',
+              color: 'cornflowerblue	',
+            }}>
+            팀소개
+          </p>
+          <div>
+            <div>
+              <img
+                src="https://i.ibb.co/74QZ13z/image.gif"
+                alt="Sample Image"
+                style={{
+                  width: '70%',
+                  height: '1000px',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: '100%',
+          height: '1200px',
+          backgroundColor: 'black',
+          paddingTop: '8%',
+          textAlign: 'center',
+        }}>
+        <div
+          style={{
+            position: 'absolute',
+            width: '90%',
+            height: '60%',
+            backgroundColor: 'white',
+            borderRadius: '20px',
+            marginLeft: '5%',
+          }}>
+          <div
+            style={{
+              fontSize: '150%',
+              fontWeight: '700',
+              color: 'black',
+            }}>
+            <p>먹을때 마다 새로운 맛을</p>
+            <p style={{ marginTop: '-1%' }}>느끼고 싶다면 지금 당장!</p>
+          </div>
+          <div
+            style={{
+              position: 'absolute',
+              width: '7%',
+              height: '7%',
+              backgroundColor: 'cornflowerblue',
+              borderRadius: '5px',
+              color: 'white',
+              fontSize: '70%',
+              marginLeft: '46.5%',
+              fontWeight: '700',
+            }}>
+            <p>앱 다운로드</p>
+          </div>
+          <div>
+            <img
+              src="https://i.ibb.co/xht4B99/dwdwd-0000-removebg-preview.png"
+              alt="Sample Image"
+              style={{
+                width: '23%',
+                marginTop: '3.5%',
+                marginLeft: '3%',
+              }}
+              className={isVisible ? 'image-transition visible' : 'image-transition'}
+            />
+          </div>
+          <div
+            style={{
+              fontSize: '100%',
+              fontWeight: '300',
+              color: 'white',
+              marginTop: '10%',
+            }}>
+            <p>2024 GrilMaster</p>
+            <p style={{ marginTop: '1%' }}>(주) GrilMasterㅣ대표</p>
+            <p style={{ marginTop: '1%' }}>이메일 wkdalsdudqq@gamil.com</p>
           </div>
         </div>
       </div>

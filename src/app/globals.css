@@ -23,11 +23,9 @@ html > body {
 .photobanner {
   position: relative;
   height: 339px;
-  width: 3000px;
-  margin-bottom: 30px;
   display: flex;
   border-radius: 15px;
-  animation: bannermove 20s linear infinite;
+  animation: bannermove 30s linear infinite;
 }
 
 .photobanner img {
@@ -39,9 +37,9 @@ html > body {
 
 @keyframes bannermove {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
