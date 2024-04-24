@@ -46,6 +46,49 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    createInfiniteSlider();
+  }, []);
+
+  const createInfiniteSlider = () => {
+    const container = document.querySelector('.photobanner');
+    const images = container.querySelectorAll('.image-container');
+
+    // Function to clone and append images
+    const cloneAndAppendImages = () => {
+      images.forEach((image) => {
+        const clone = image.cloneNode(true);
+        container.appendChild(clone);
+      });
+    };
+
+    // Initial cloning and appending
+    cloneAndAppendImages();
+
+    // Interval to clone and append images continuously
+    setInterval(() => {
+      cloneAndAppendImages();
+    }, 3000); // Adjust the interval as needed (in milliseconds)
+  };
+
+  // Function to continuously loop through images
+  const startContinuousSlide = () => {
+    const container = document.querySelector('.photobanner');
+    const images = container.querySelectorAll('.image-container');
+
+    let index = 0;
+    const imageCount = images.length;
+
+    setInterval(() => {
+      images[index].classList.remove('visible');
+      index = (index + 1) % imageCount;
+      images[index].classList.add('visible');
+    }, 3000); // Adjust the interval as needed (in milliseconds)
+
+    // Ensure the first image is visible initially
+    images[index].classList.add('visible');
+  };
+
   return (
     <>
       <AppBar position="static" sx={{ backgroundColor: 'black' }}>
@@ -195,28 +238,35 @@ function App() {
             </div>
             <div className="image-container">
               <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MjRfMTE1%2FMDAxNjIxODM3NjA3MTU4.CWEgZmmBdyLZ9PGR4K37qhuwPhDoQ2P_Njb51H98hMog.73BEYZNOzTFP5CuROUWaS1n_fgVhla0z_liN8_1tQBUg.JPEG.zestncom%2F20210413_class101_1165.jpg&type=sc960_832"
+                src="https://cdn.class101.net/images/ff5fbbb5-35a7-4fee-8540-35a0a120066e"
                 alt=""
               />
               <p>정육왕</p>
             </div>
             <div className="image-container">
-              <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5415%2F2023%2F02%2F04%2F0000188663_004_20230204140202134.png&type=sc960_832"
-                alt=""
-              />
+              <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2018/10/23/92539689.2.jpg" alt="" />
               <p>백종원</p>
             </div>
             <div className="image-container">
               <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F609%2F2023%2F07%2F17%2F202307171642515710_2_20230717164905597.jpg&type=a340"
+                src="https://i.namu.wiki/i/Xp4MMRlKcjkKf5CNoTmUcUjUL5VFfg9FvvWpT4U1XdXgSHqA1K5g2u3HT-n_3aJcsVufREe3GBTw3NBcUPab2g.webp"
                 alt=""
               />
               <p>승우아빠</p>
             </div>
             <div className="image-container">
-              <img src="https://i.ytimg.com/vi/0jfdHsDoJwg/maxresdefault.jpg" alt="" />
-              <p>쿡톡</p>
+              <img
+                src="https://i.namu.wiki/i/LWNmFEecKVs4e0rXZS52gnDvzSZ-PUfNh6zGZCD-1XCLR2bRRX-cpnUGv9KvqvaJLtPTDQPVfCkXgbdHGV0C4Nkr8-a8U-bfITZpgcmrmxPHFDPEQh7aFb-XYFQDo7uhlGmBq0nGJRCF7XAjOF-F3w.webp"
+                alt=""
+              />
+              <p>취요남</p>
+            </div>
+            <div className="image-container">
+              <img
+                src="https://americanmeat.co.kr/wp-content/uploads/2020/09/USMEF_%EB%AC%B8%EC%B8%A0101%ED%81%B4%EB%A0%88%EC%8A%A4_img1-1024x1024.png"
+                alt=""
+              />
+              <p>문츠</p>
             </div>
           </div>
         </div>

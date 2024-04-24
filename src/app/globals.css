@@ -25,7 +25,7 @@ html > body {
   height: 339px;
   display: flex;
   border-radius: 15px;
-  animation: bannermove 30s linear infinite;
+  animation: bannermove 500s linear infinite;
 }
 
 .photobanner img {
@@ -40,6 +40,6 @@ html > body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(calc(-100% * 30));
   }
 }
