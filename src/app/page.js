@@ -128,7 +128,9 @@ function App() {
               }}>
               GrillMaster
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box
+              sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+              style={{ marginLeft: '40%' }}>
               {pages.map((page) => (
                 <Button
                   key={page}
