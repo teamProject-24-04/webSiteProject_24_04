@@ -5,11 +5,28 @@ import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from '@mui/material/styles';
 import { Button, AppBar, Toolbar, CssBaseline, Box, Typography, Container } from '@mui/material';
 import RootTheme from './theme';
-import './App.css'; // Import CSS file for animations
+import './App.css';
 
 function App() {
-  const pages = ['팀소개', '레시피 리스트', '앱 다운로드'];
+  const pages = ['팀소개', '앱 다운로드'];
   const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const pageLinks = [
+    'https://abiding-muse-07f.notion.site/45b909f85c4347d18e86a9cf4a31ae18?pvs=4', // 팀소개 페이지 링크
+    // 다른 페이지에 대한 링크가 필요한 경우 여기에 추가
+  ];
+
+  const handlePageClick = (index) => {
+    if (index === 0) {
+      // "팀소개" 페이지로 리다이렉트
+      window.location.href = pageLinks[index];
+    } else {
+      // 다른 페이지의 클릭 처리 필요시
+      // 현재는 클릭한 페이지를 콘솔에 로그로 남깁니다
+      console.log(`"${pages[index]}"를 클릭했습니다`);
+    }
+  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -28,7 +45,7 @@ function App() {
       }
     });
   };
-  // Function to check if element is in viewport
+  // 요소가 뷰포트 내에 있는지 확인하는 함수
   const isInViewport = (elem) => {
     const bounding = elem.getBoundingClientRect();
     return (
@@ -54,7 +71,7 @@ function App() {
     const container = document.querySelector('.photobanner');
     const images = container.querySelectorAll('.image-container');
 
-    // Function to clone and append images
+    // 이미지를 복제하고 추가하는 함수
     const cloneAndAppendImages = () => {
       images.forEach((image) => {
         const clone = image.cloneNode(true);
@@ -62,16 +79,19 @@ function App() {
       });
     };
 
-    // Initial cloning and appending
+    // 초기 복제 및 추가
     cloneAndAppendImages();
 
-    // Interval to clone and append images continuously
+    // 이미지를 지속적으로 복제하고 추가하는 간격
     setInterval(() => {
       cloneAndAppendImages();
-    }, 3000); // Adjust the interval as needed (in milliseconds)
+    }, 3000); // 간격을 필요에 맞게 조정하세요 (밀리초 단위)
+
+    // 지속적으로 이미지를 반복하는 함수 호출
+    startContinuousSlide();
   };
 
-  // Function to continuously loop through images
+  // 이미지를 지속적으로 반복하는 함수
   const startContinuousSlide = () => {
     const container = document.querySelector('.photobanner');
     const images = container.querySelectorAll('.image-container');
@@ -83,9 +103,9 @@ function App() {
       images[index].classList.remove('visible');
       index = (index + 1) % imageCount;
       images[index].classList.add('visible');
-    }, 3000); // Adjust the interval as needed (in milliseconds)
+    }, 3000); // 간격을 필요에 맞게 조정하세요 (밀리초 단위)
 
-    // Ensure the first image is visible initially
+    // 초기에 첫 번째 이미지가 보이도록 함
     images[index].classList.add('visible');
   };
 
@@ -111,30 +131,13 @@ function App() {
               }}>
               GrillMaster
             </Typography>
-
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 1,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 3,
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}>
-              GrillMaster
-            </Typography>
             <Box
               sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
               style={{ marginLeft: '40%' }}>
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => handlePageClick(index)}
                   sx={{
                     my: 2,
                     color: 'white',
@@ -244,10 +247,6 @@ function App() {
                 alt=""
               />
               <p>정육왕</p>
-            </div>
-            <div className="image-container">
-              <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2018/10/23/92539689.2.jpg" alt="" />
-              <p>백종원</p>
             </div>
             <div className="image-container">
               <img
@@ -507,15 +506,106 @@ function App() {
           <p style={{ fontSize: '100%', fontWeight: '500', marginTop: '0' }}>
             동료들이 모여 만들었어요.
           </p>
-          <p
-            style={{
-              fontSize: '100%',
-              fontWeight: '500',
-              marginTop: '0',
-              color: 'cornflowerblue	',
-            }}>
-            팀소개
-          </p>
+          <div style={{ padding: '20px', backgroundColor: 'black' }}>
+            <p
+              style={{
+                fontSize: '100%',
+                fontWeight: '500',
+                marginTop: '0',
+                color: 'cornflowerblue',
+                backgroundColor: 'black',
+                cursor: 'pointer',
+              }}
+              onClick={() => setIsExpanded(!isExpanded)}>
+              팀 소개
+            </p>
+            {isExpanded && (
+              <div
+                style={{
+                  display: 'flex',
+                  marginTop: '10px',
+                  justifyContent: 'center',
+                  marginLeft: '10%',
+                }}>
+                <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member 1"
+                    style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+                  />
+                  <div style={{ color: 'white', fontSize: '14px' }}>
+                    <p>조장 : 김선우</p>
+                    <p>나이 : 28</p>
+                    <p>email :</p>
+                    <a
+                      href="https://github.com/JANG-MINYOUNG"
+                      style={{ color: 'white', textDecoration: 'none' }}
+                      onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
+                      onMouseLeave={(e) => (e.target.style.color = 'white')}>
+                      github : https://github.com/JANG-MINYOUNG
+                    </a>
+                  </div>
+                </div>
+                <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member 2"
+                    style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+                  />
+                  <div style={{ color: 'white', fontSize: '14px' }}>
+                    <p>팀원 : 오창진</p>
+                    <p>나이 : 29</p>
+                    <p>email :</p>
+                    <a
+                      href="https://github.com/JANG-MINYOUNG"
+                      style={{ color: 'white', textDecoration: 'none' }}
+                      onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
+                      onMouseLeave={(e) => (e.target.style.color = 'white')}>
+                      github : https://github.com/JANG-MINYOUNG
+                    </a>
+                  </div>
+                </div>
+                <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member 3"
+                    style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+                  />
+                  <div style={{ color: 'white', fontSize: '14px' }}>
+                    <p>팀원 : 장민영</p>
+                    <p>나이 : 27</p>
+                    <p>email : wkdalsdudqq@gamil.com</p>
+                    <a
+                      href="https://github.com/JANG-MINYOUNG"
+                      style={{ color: 'white', textDecoration: 'none' }}
+                      onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
+                      onMouseLeave={(e) => (e.target.style.color = 'white')}>
+                      github : https://github.com/JANG-MINYOUNG
+                    </a>
+                  </div>
+                </div>
+                <div style={{ flex: '1', textAlign: 'left' }}>
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Team Member 4"
+                    style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+                  />
+                  <div style={{ color: 'white', fontSize: '14px' }}>
+                    <p>팀원 : 배승원</p>
+                    <p>나이 : 27</p>
+                    <p>email :</p>
+                    <a
+                      href="https://github.com/JANG-MINYOUNG"
+                      style={{ color: 'white', textDecoration: 'none' }}
+                      onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
+                      onMouseLeave={(e) => (e.target.style.color = 'white')}>
+                      github : https://github.com/JANG-MINYOUNG
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
           <div>
             <div>
               <img

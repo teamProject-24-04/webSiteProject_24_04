@@ -14,6 +14,16 @@ html > body {
   font-family: 'GmarketSansMedium';
 }
 
+/* 노말라이즈 */
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 이미지 슬라이드쇼 */
 .wrapper {
   width: 100%;
@@ -25,7 +35,7 @@ html > body {
   height: 339px;
   display: flex;
   border-radius: 15px;
-  animation: bannermove 500s linear infinite;
+  animation: bannermove 800s linear infinite;
 }
 
 .photobanner img {
