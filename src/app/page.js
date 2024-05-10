@@ -529,77 +529,81 @@ function App() {
                 }}>
                 <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
                   <img
-                    src="https://via.placeholder.com/150"
+                    src="https://i.ibb.co/64DBbvn/image.png"
                     alt="Team Member 1"
                     style={{ width: '150px', height: '150px', borderRadius: '50%' }}
                   />
                   <div style={{ color: 'white', fontSize: '14px' }}>
                     <p>조장 : 김선우</p>
-                    <p>나이 : 28</p>
-                    <p>email :</p>
+                    <p>생년월일 : 97.09.13</p>
+                    <p>email : pavico0913@gmail.com</p>
+                    <p>전화번호 : 01087936053</p>
                     <a
-                      href="https://github.com/JANG-MINYOUNG"
+                      href="https://gitub.com/ksw70913"
                       style={{ color: 'white', textDecoration: 'none' }}
                       onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
                       onMouseLeave={(e) => (e.target.style.color = 'white')}>
-                      github : https://github.com/JANG-MINYOUNG
+                      github : gitub.com/ksw70913
                     </a>
                   </div>
                 </div>
                 <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
                   <img
-                    src="https://via.placeholder.com/150"
+                    src="https://i.ibb.co/64DBbvn/image.png"
                     alt="Team Member 2"
                     style={{ width: '150px', height: '150px', borderRadius: '50%' }}
                   />
                   <div style={{ color: 'white', fontSize: '14px' }}>
                     <p>팀원 : 오창진</p>
-                    <p>나이 : 29</p>
-                    <p>email :</p>
+                    <p>생년월일 : 96.10.02</p>
+                    <p>email : tama51@naver.com / codetama51@gmail.com</p>
+                    <p>전화번호 : 01098006111</p>
                     <a
-                      href="https://github.com/JANG-MINYOUNG"
+                      href="https://github.com/dhckdwls"
                       style={{ color: 'white', textDecoration: 'none' }}
                       onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
                       onMouseLeave={(e) => (e.target.style.color = 'white')}>
-                      github : https://github.com/JANG-MINYOUNG
+                      github : github.com/dhckdwls
                     </a>
                   </div>
                 </div>
                 <div style={{ flex: '1', marginRight: '20px', textAlign: 'left' }}>
                   <img
-                    src="https://via.placeholder.com/150"
+                    src="https://i.ibb.co/64DBbvn/image.png"
                     alt="Team Member 3"
                     style={{ width: '150px', height: '150px', borderRadius: '50%' }}
                   />
                   <div style={{ color: 'white', fontSize: '14px' }}>
                     <p>팀원 : 장민영</p>
-                    <p>나이 : 27</p>
+                    <p>생년월일 : 98.07.04</p>
                     <p>email : wkdalsdudqq@gamil.com</p>
+                    <p>전화번호 : 01063501392</p>
                     <a
                       href="https://github.com/JANG-MINYOUNG"
                       style={{ color: 'white', textDecoration: 'none' }}
                       onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
                       onMouseLeave={(e) => (e.target.style.color = 'white')}>
-                      github : https://github.com/JANG-MINYOUNG
+                      github : github.com/JANG-MINYOUNG
                     </a>
                   </div>
                 </div>
                 <div style={{ flex: '1', textAlign: 'left' }}>
                   <img
-                    src="https://via.placeholder.com/150"
+                    src="https://i.ibb.co/64DBbvn/image.png"
                     alt="Team Member 4"
                     style={{ width: '150px', height: '150px', borderRadius: '50%' }}
                   />
                   <div style={{ color: 'white', fontSize: '14px' }}>
                     <p>팀원 : 배승원</p>
-                    <p>나이 : 27</p>
-                    <p>email :</p>
+                    <p>생년월일 : 98.12.30</p>
+                    <p>email : dudcnsaus@gmail.com</p>
+                    <p>전화번호 : 01023948792</p>
                     <a
-                      href="https://github.com/JANG-MINYOUNG"
+                      href="https://github.com/qotmddnjs"
                       style={{ color: 'white', textDecoration: 'none' }}
                       onMouseEnter={(e) => (e.target.style.color = 'cornflowerblue')}
                       onMouseLeave={(e) => (e.target.style.color = 'white')}>
-                      github : https://github.com/JANG-MINYOUNG
+                      github : github.com/qotmddnjs
                     </a>
                   </div>
                 </div>
